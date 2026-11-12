@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lendas do Ringue</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M3 13l7-10 3 2-7 10z' fill='%23ffd250'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <section id="menu" class="screen">
+    <h1>LENDAS DO RINGUE</h1>
+    <p class="sub">luta em plataforma entre amigos</p>
+    <form id="join-form" class="panel">
+      <label>Seu nome <input id="name" maxlength="16" autocomplete="nickname" required></label>
+      <label id="pw-row" class="hidden">Senha da sala <input id="password" type="password"></label>
+      <button type="submit">Entrar na sala</button>
+      <button type="button" id="practice">Treino contra bot</button>
+      <p id="menu-error" class="error"></p>
+    </form>
+    <p class="help">Controles: WASD ou setas movem · Espaço pula · J leve · K forte (segure p/
+      carregar) · L esquiva · M som · controle de videogame também funciona</p>
+  </section>
+
+  <section id="lobby" class="screen hidden">
+    <h2>SALA</h2>
+    <div class="panel wide">
+      <ul id="players"></ul>
+      <div class="row">
+        <label>Seu lutador <select id="fighter"></select></label>
+        <button id="ready" type="button">Pronto</button>
+      </div>
+      <div id="host-controls" class="row hidden">
+        <label>Palco <select id="stage"></select></label>
+        <label>Bots <select id="bot-level">
+          <option value="facil">Fácil</option><option value="medio">Médio</option>
+          <option value="dificil">Difícil</option></select></label>
+        <button id="add-bot" type="button">+ Bot</button>
+        <button id="remove-bot" type="button">− Bot</button>
+        <button id="start" type="button" class="primary">Iniciar</button>
+      </div>
+      <p id="lobby-status" class="status"></p>
+      <button id="leave" type="button" class="link">Sair da sala</button>
+    </div>
+  </section>
+
+  <div id="reconnect" class="banner hidden">Conexão caiu — reconectando…</div>
+  <div id="loading" class="banner">Carregando…</div>
+
+  <script src="/vendor/msgpack.min.js"></script>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

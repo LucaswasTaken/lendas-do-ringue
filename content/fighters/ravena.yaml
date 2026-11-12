@@ -1,0 +1,47 @@
+# Ravena — espadachim equilibrada.
+# Hitbox: x/y = centro (x à frente do lutador, y acima dos pés), w/h = tamanho.
+# angle: 0 = para frente, 90 = para cima, negativo = para baixo.
+# Knockback = (base + growth * %alvo) / weight.
+name: Ravena
+color: [120, 170, 255]
+weight: 1.0
+speed: 1.05
+air_jumps: 2
+hurtbox: {w: 50, h: 110}
+look: {weapon: sword, accent: [235, 235, 250], hair: [40, 40, 70]}
+moves:
+  light_neutral:
+    {name: Corte Alto, startup: 5, active: 3, recovery: 12,
+     hitboxes: [{x: 30, y: 100, w: 80, h: 50, dmg: 8, angle: 75, base: 280, growth: 5}]}
+  light_side:
+    {name: Estocada, startup: 6, active: 3, recovery: 14, impulse: [380, 0],
+     hitboxes: [{x: 60, y: 60, w: 90, h: 40, dmg: 9, angle: 30, base: 300, growth: 5.5}]}
+  light_down:
+    {name: Rasteira, startup: 5, active: 4, recovery: 14,
+     hitboxes: [{x: 50, y: 15, w: 90, h: 30, dmg: 7, angle: 20, base: 260, growth: 4.5}]}
+  air_neutral:
+    {name: Giro Aéreo, startup: 5, active: 5, recovery: 12,
+     hitboxes: [{x: 0, y: 60, w: 130, h: 110, dmg: 8, angle: 60, base: 280, growth: 5}]}
+  air_side:
+    {name: Talho Aéreo, startup: 6, active: 4, recovery: 14,
+     hitboxes: [{x: 55, y: 65, w: 85, h: 40, dmg: 9, angle: 35, base: 300, growth: 5.5}]}
+  air_down:
+    {name: Mergulho, startup: 7, active: 6, recovery: 16,
+     hitboxes: [{x: 10, y: -5, w: 70, h: 50, dmg: 10, angle: -60, base: 320, growth: 5.5}]}
+  heavy_neutral:
+    {name: Arco Lunar, startup: 14, active: 5, recovery: 26, charge: 40,
+     hitboxes: [{x: 20, y: 130, w: 130, h: 70, dmg: 16, angle: 85, base: 380, growth: 10}]}
+  heavy_side:
+    {name: Investida Real, startup: 16, active: 5, recovery: 28, charge: 40, impulse: [520, 0],
+     hitboxes: [{x: 70, y: 60, w: 110, h: 50, dmg: 18, angle: 38, base: 420, growth: 11}]}
+  heavy_down:
+    {name: Varredura, startup: 13, active: 6, recovery: 26, charge: 40,
+     hitboxes: [{x: 0, y: 25, w: 220, h: 40, dmg: 15, angle: 25, base: 380, growth: 9.5}]}
+  recovery:
+    {name: Asa Ascendente, startup: 8, active: 10, recovery: 22, impulse: [150, 1150],
+     landing_lag: 12,
+     hitboxes: [{x: 20, y: 90, w: 80, h: 120, dmg: 11, angle: 80, base: 340, growth: 6}]}
+  air_heavy_down:
+    {name: Queda Cortante, startup: 10, active: 16, recovery: 20, impulse: [0, -1500],
+     landing_lag: 14,
+     hitboxes: [{x: 0, y: 10, w: 90, h: 50, dmg: 15, angle: 45, base: 380, growth: 9}]}

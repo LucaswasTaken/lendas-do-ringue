@@ -1,0 +1,28 @@
+# Ao criar uma tag v* (ex.: git tag v0.1.0 && git push --tags), gera o .exe e publica em Releases.
+name: Release
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+      - run: uv sync
+      - run: uv run python tools/build_audio.py
+      - name: Build
+        run: >
+          uv run pyinstaller client/__main__.py --name LendasDoRingue --noconsole --onedir
+          --noconfirm --add-data "content;content" --add-data "assets;assets"
+          --add-data "web;web" --collect-all arcade
+          --hidden-import server.game_server --hidden-import server.web
+      - run: Compress-Archive -Path dist/LendasDoRingue -DestinationPath LendasDoRingue-windows.zip
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: LendasDoRingue-windows.zip
+          generate_release_notes: true

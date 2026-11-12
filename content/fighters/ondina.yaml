@@ -1,0 +1,43 @@
+# Ondina — lanceira de alcance longo: golpes lentos mas que acertam de longe.
+name: Ondina
+color: [90, 210, 220]
+weight: 0.95
+speed: 1.0
+air_jumps: 2
+hurtbox: {w: 50, h: 108}
+look: {weapon: spear, accent: [230, 250, 255], hair: [30, 90, 140]}
+moves:
+  light_neutral:
+    {name: Ponta Alta, startup: 6, active: 3, recovery: 13,
+     hitboxes: [{x: 40, y: 120, w: 60, h: 80, dmg: 8, angle: 82, base: 290, growth: 5}]}
+  light_side:
+    {name: Estocada Longa, startup: 7, active: 3, recovery: 15,
+     hitboxes: [{x: 95, y: 60, w: 130, h: 30, dmg: 9, angle: 25, base: 310, growth: 5.5}]}
+  light_down:
+    {name: Varrida Baixa, startup: 6, active: 4, recovery: 15,
+     hitboxes: [{x: 80, y: 12, w: 120, h: 24, dmg: 7, angle: 70, base: 260, growth: 4.5}]}
+  air_neutral:
+    {name: Hélice, startup: 6, active: 6, recovery: 13,
+     hitboxes: [{x: 0, y: 55, w: 170, h: 70, dmg: 8, angle: 50, base: 280, growth: 5}]}
+  air_side:
+    {name: Arpão, startup: 7, active: 4, recovery: 15,
+     hitboxes: [{x: 90, y: 60, w: 120, h: 30, dmg: 9, angle: 30, base: 300, growth: 5.5}]}
+  air_down:
+    {name: Âncora, startup: 8, active: 6, recovery: 16,
+     hitboxes: [{x: 10, y: -30, w: 40, h: 90, dmg: 10, angle: -75, base: 320, growth: 5.5}]}
+  heavy_neutral:
+    {name: Gêiser, startup: 15, active: 6, recovery: 26, charge: 40,
+     hitboxes: [{x: 30, y: 160, w: 80, h: 120, dmg: 16, angle: 86, base: 380, growth: 10}]}
+  heavy_side:
+    {name: Tridente, startup: 17, active: 5, recovery: 28, charge: 40, impulse: [300, 0],
+     hitboxes: [{x: 110, y: 60, w: 150, h: 40, dmg: 17, angle: 36, base: 410, growth: 10.5}]}
+  heavy_down:
+    {name: Maré, startup: 14, active: 7, recovery: 26, charge: 40,
+     hitboxes: [{x: 0, y: 20, w: 280, h: 34, dmg: 14, angle: 28, base: 370, growth: 9.5}]}
+  recovery:
+    {name: Jato, startup: 8, active: 10, recovery: 22, impulse: [100, 1180], landing_lag: 12,
+     hitboxes: [{x: 10, y: 110, w: 60, h: 140, dmg: 10, angle: 82, base: 340, growth: 6}]}
+  air_heavy_down:
+    {name: Cachoeira, startup: 11, active: 16, recovery: 20, impulse: [0, -1500],
+     landing_lag: 14,
+     hitboxes: [{x: 0, y: 0, w: 100, h: 60, dmg: 15, angle: 45, base: 380, growth: 9}]}

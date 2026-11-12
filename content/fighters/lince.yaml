@@ -1,0 +1,44 @@
+# Lince — leve e rápida com garras: combos curtos, 3 pulos aéreos, voa longe.
+name: Lince
+color: [120, 220, 140]
+weight: 0.82
+speed: 1.25
+air_jumps: 3
+hurtbox: {w: 44, h: 96}
+look: {weapon: claws, accent: [250, 230, 120], hair: [230, 170, 60]}
+moves:
+  light_neutral:
+    {name: Arranhão, startup: 4, active: 2, recovery: 10,
+     hitboxes: [{x: 28, y: 85, w: 70, h: 45, dmg: 6, angle: 80, base: 250, growth: 4.5}]}
+  light_side:
+    {name: Bote, startup: 4, active: 3, recovery: 12, impulse: [480, 0],
+     hitboxes: [{x: 45, y: 50, w: 70, h: 40, dmg: 7, angle: 30, base: 270, growth: 5}]}
+  light_down:
+    {name: Rasante, startup: 4, active: 4, recovery: 12, impulse: [300, 0],
+     hitboxes: [{x: 40, y: 12, w: 80, h: 26, dmg: 6, angle: 60, base: 240, growth: 4}]}
+  air_neutral:
+    {name: Pirueta, startup: 4, active: 5, recovery: 10,
+     hitboxes: [{x: 0, y: 50, w: 110, h: 100, dmg: 7, angle: 55, base: 250, growth: 4.5}]}
+  air_side:
+    {name: Chute Felino, startup: 5, active: 4, recovery: 12,
+     hitboxes: [{x: 45, y: 55, w: 75, h: 36, dmg: 8, angle: 32, base: 270, growth: 5}]}
+  air_down:
+    {name: Garras Cadentes, startup: 6, active: 5, recovery: 14,
+     hitboxes: [{x: 5, y: -5, w: 60, h: 46, dmg: 8, angle: -55, base: 280, growth: 5}]}
+  heavy_neutral:
+    {name: Salto Mortal, startup: 12, active: 5, recovery: 22, charge: 35,
+     hitboxes: [{x: 15, y: 115, w: 110, h: 70, dmg: 14, angle: 85, base: 350, growth: 9.5}]}
+  heavy_side:
+    {name: Bote Fatal, startup: 13, active: 5, recovery: 24, charge: 35, impulse: [700, 0],
+     hitboxes: [{x: 55, y: 50, w: 90, h: 45, dmg: 15, angle: 40, base: 380, growth: 10}]}
+  heavy_down:
+    {name: Redemoinho, startup: 11, active: 8, recovery: 22, charge: 35,
+     hitboxes: [{x: 0, y: 25, w: 190, h: 40, dmg: 13, angle: 35, base: 350, growth: 9}]}
+  recovery:
+    {name: Ascensão Felina, startup: 6, active: 12, recovery: 20, impulse: [200, 1250],
+     landing_lag: 10,
+     hitboxes: [{x: 15, y: 80, w: 70, h: 110, dmg: 9, angle: 80, base: 320, growth: 5.5}]}
+  air_heavy_down:
+    {name: Mergulho Felino, startup: 9, active: 14, recovery: 18, impulse: [250, -1400],
+     landing_lag: 12,
+     hitboxes: [{x: 15, y: 10, w: 80, h: 50, dmg: 13, angle: 40, base: 360, growth: 8.5}]}

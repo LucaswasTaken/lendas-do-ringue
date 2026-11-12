@@ -1,0 +1,7 @@
+﻿# Planície — palco plano competitivo, sem plataformas extras.
+name: Planície
+background: [20, 34, 38]
+platforms:
+  - {x: -600, y: -300, w: 1200, h: 300}
+blast: {left: -1450, right: 1450, bottom: -800, top: 1100}
+spawns: [[-350, 60], [350, 60], [-120, 60], [120, 60]]

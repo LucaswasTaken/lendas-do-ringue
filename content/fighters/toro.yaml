@@ -1,0 +1,45 @@
+# Toro — peso-pesado com martelo: lento, difícil de lançar, golpes fortes.
+name: Toro
+color: [220, 110, 70]
+weight: 1.3
+speed: 0.85
+air_jumps: 2
+hurtbox: {w: 64, h: 120}
+look: {weapon: hammer, accent: [110, 70, 40], hair: [60, 30, 20]}
+moves:
+  light_neutral:
+    {name: Cabeçada, startup: 6, active: 3, recovery: 14,
+     hitboxes: [{x: 30, y: 110, w: 80, h: 60, dmg: 10, angle: 70, base: 300, growth: 5.5}]}
+  light_side:
+    {name: Empurrão, startup: 7, active: 4, recovery: 16, impulse: [300, 0],
+     hitboxes: [{x: 60, y: 65, w: 90, h: 60, dmg: 11, angle: 25, base: 340, growth: 6}]}
+  light_down:
+    {name: Pisão, startup: 7, active: 4, recovery: 16,
+     hitboxes: [{x: 45, y: 15, w: 90, h: 30, dmg: 9, angle: 15, base: 280, growth: 5}]}
+  air_neutral:
+    {name: Rodopio, startup: 7, active: 5, recovery: 15,
+     hitboxes: [{x: 0, y: 60, w: 150, h: 120, dmg: 10, angle: 55, base: 300, growth: 5.5}]}
+  air_side:
+    {name: Marretada Aérea, startup: 8, active: 4, recovery: 16,
+     hitboxes: [{x: 60, y: 60, w: 100, h: 60, dmg: 12, angle: 30, base: 340, growth: 6}]}
+  air_down:
+    {name: Bigorna, startup: 9, active: 6, recovery: 18,
+     hitboxes: [{x: 5, y: -5, w: 80, h: 60, dmg: 13, angle: -70, base: 360, growth: 6}]}
+  heavy_neutral:
+    {name: Erupção, startup: 17, active: 6, recovery: 30, charge: 45,
+     hitboxes: [{x: 10, y: 140, w: 150, h: 80, dmg: 20, angle: 88, base: 420, growth: 11}]}
+  heavy_side:
+    {name: Martelo do Trovão, startup: 20, active: 6, recovery: 32, charge: 45,
+     impulse: [380, 0],
+     hitboxes: [{x: 80, y: 60, w: 120, h: 70, dmg: 22, angle: 35, base: 460, growth: 12}]}
+  heavy_down:
+    {name: Terremoto, startup: 16, active: 6, recovery: 30, charge: 45,
+     hitboxes: [{x: 0, y: 20, w: 260, h: 40, dmg: 18, angle: 30, base: 420, growth: 10}]}
+  recovery:
+    {name: Salto do Touro, startup: 9, active: 10, recovery: 24, impulse: [120, 1100],
+     landing_lag: 14,
+     hitboxes: [{x: 15, y: 100, w: 90, h: 120, dmg: 12, angle: 80, base: 360, growth: 6}]}
+  air_heavy_down:
+    {name: Meteoro, startup: 12, active: 18, recovery: 22, impulse: [0, -1600],
+     landing_lag: 16,
+     hitboxes: [{x: 0, y: 10, w: 110, h: 60, dmg: 18, angle: 50, base: 400, growth: 10}]}

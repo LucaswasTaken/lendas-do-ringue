@@ -1,0 +1,10 @@
+﻿# Coliseu — plataforma principal + 2 plataformas finas (soft: atravessa por baixo, ↓ desce).
+# Coordenadas: y para cima; o topo da plataforma principal fica em y = 0.
+name: Coliseu
+background: [26, 24, 44]
+platforms:
+  - {x: -520, y: -400, w: 1040, h: 400}
+  - {x: -400, y: 210, w: 250, h: 16, soft: true}
+  - {x: 150, y: 210, w: 250, h: 16, soft: true}
+blast: {left: -1400, right: 1400, bottom: -850, top: 1100}
+spawns: [[-300, 60], [300, 60], [-275, 300], [275, 300]]
